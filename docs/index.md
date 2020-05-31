@@ -188,37 +188,37 @@ Here are some pages that I found to be especially useful, with a brief synopsis 
 
 ### Pickling Links:
 
-https://www.learnpython.org/en/Serialization
+[Learn Python](https://www.learnpython.org/en/Serialization)
 
 I really enjoy the DataCamp widgets that let you toy with the code they offer in the examples on this page (something I wish I could put on my GitHub). Not only do I get a feeling for how the author approaches both using JSON and pickle, I have the opportunity to edit and implement my own variations. 
 
-https://www.tutorialspoint.com/python_data_persistence/python_data_persistence_pickle_module.htm
+[Tutorials Point](https://www.tutorialspoint.com/python_data_persistence/python_data_persistence_pickle_module.htm)
 
 As we approach object orientation, I thought it best to bookmark this site, as it gives a brief example of both the Pickler and Unpickler classes. I do not understand how these are supposed to be different, yet, but as I said, worth holding on to in the interim.
 
-https://realpython.com/python-pickle-module/
+[Real Python](https://realpython.com/python-pickle-module/)
 
 Noteworthy in large part because there are some advanced techniques that I might not have known were related to pickling or serialization: like JSON. Also of note is that there are security issues with the pickle module. Unpickling unknown data is like eating pickles you found in the garden shed of a house you inherited from your long lost relative. 
 
-https://www.programiz.com/python-programming/docstrings
+[Programiz](https://www.programiz.com/python-programming/docstrings)
 
 I needed to brush up on docstrings anyway, and this was the only page to mention the pickle module. It's a simple list of all the available functions that the pickle module can perform, and the syntax for each. I was prompted to look up the difference between some, primarily the string versions dumps() and loads() versus their anything-goes counterparts.
 
 ### Exception Handling Links:
 
-https://www.learnpython.org/en/Exception_Handling
+[Learn Python](https://www.learnpython.org/en/Exception_Handling)
 
 I realized when looking at this page just how valuable the PyCharm built-in warnings and error are. I could have had NameError, IndexError, ValueError all over the place, but PyCharm by and large just highlights them before you even run the code. Good to know what they look like, and how to implement them, though, with the DataCamp widgets.
 
-https://www.tutorialspoint.com/python/python_exceptions.htm
+[Tutorials Point](https://www.tutorialspoint.com/python/python_exceptions.htm)
 
 A list of 29 existing errors, and when they are raised! Superb! Assert will be useful in the future, too, I'll bet. Mostly I appreciated the layman's approach to exception handling here. There's pseudo code, real code, and then step-by-step explanations of what is happening as you watch the code execute. Also a good reminder that you can have exept clauses without exceptions, or with many.
 
-https://realpython.com/python-exceptions/
+[Real Python](https://realpython.com/python-exceptions/)
 
 Some of the concepts here are over my head, but I wanted to keep it in mind because the site itself is worthwhile, as are their many visual aids, videos, downloadables. 
 
-https://www.programiz.com/python-programming/exception-handling
+[Programiz](https://www.programiz.com/python-programming/exception-handling)
 
 I thought I could use some of the existing errors from the book, like ValueError, before I made my own to raise in instances of non-alphabetical naming. I looked here in large part because you get to run the code on the page, and see how it operates, and how the errors look.
 
