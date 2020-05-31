@@ -6,7 +6,7 @@
  \/___/  \'  '\  /
           \'__'\/
 ```
-Erik Knighton_____5/30/2020_____IT FDN 100 A_____Assignment07
+Erik Knighton _____ 5/30/2020 _____ IT FDN 100 A _____ Assignment07
 
 # Erringly Diced Pickles
 	  
