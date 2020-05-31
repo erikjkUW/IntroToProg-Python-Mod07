@@ -9,13 +9,14 @@
 ### Erik Knighton _____ 5/30/2020 _____ IT FDN 100 A _____ Assignment07
 
 # Erringly Diced Pickles
-	  
 
+### _________________________________________	  
 ## Introduction
 I honestly don't know what I was thinking. I assumed, because we weren't starting with any preexisting code, that we were tasked with building a program equally as complex, even moreso than last week. I watched the course video, I read the documents and the textbook, but somehow I got stuck in my own head and came up with something I'm proud of, but perhaps ashamed it took so long to construct.
 
 In any case, I had talked previously about writing a script that would roll for ability scores in Dungeons and Dragons using a method taught to me: 8d6, rerolling dice under 4, and only two rerolls. You do this twice and then add and assign to your various abilities. The statistical value is in keeping with what is the standard array [15, 14, 13, 12, 10, 8], but allows higher starting values, which allows for optimizing characters without having to sacrifice too much. I already wanted to have such automation on hand to share with my adventuring group, so it seemed I could two-birds-one-stone this assignment.
 
+### _________________________________________	 
 ## Getting Carried Away
 To begin, I wrote some pseudo code to get an idea of how complicated this project might be. On the next page I have preserved it in its infancy, a testament to my naivety and hubris. Knowing we would have to pickle our data, I chose to model it on the two previous ToDo list assignments, where there would be a menu of choices, dictionary rows nested in lists, cryptic tuples to unpack and a whole mess of functions to declare as well as document (something I did not effectively flesh out last time). 
 
@@ -118,6 +119,7 @@ Here, too, is the same code operating in the terminal (Figure 2). Though I do no
 
 *It was here, after I had spent far too long poring over my script, getting everything in order, making sure all of the steps performed their requested functions successfully, and trying to make them both user-friendly as well as nicely organized on screen, that I watched the starter video. The video that says to keep it simple and write one or two code snippets that describe how to both pickle data and handle errors and exceptions. Because I had set my mind on using this script as exemplar of both of those required concepts, there was little use in backtracking now. I will publish this code on my GitHub page, and take whatever hit I should from erring towards unnecessary complexity. And where would I be if my long-windedness were unjustly fettered?*
 
+### _________________________________________	 
 ## In a Proverbial Pickle
 
 My script, as I said above, was modeled on the Task/Priority script from assignments 6 and 7. Therefore, pickling instead of writing to a text document was a simple leap in difficulty. 
@@ -180,6 +182,7 @@ The terminal, of course, doesn't display this error, instead terminating the pro
 
 I believe that is the last of the error handling concepts I tackled in this module. Using finally was the only clause I didn't make use of. I am keeping it in mind for future assignments whereby a document might require closure only after passing all the exceptions or something. Next is taking on Jekyll with the GitHub website portion of the assignment. Plenty of opportunities to go astray there, as well.
 
+### _________________________________________	 
 ## Websiteography
 Here are some pages that I found to be especially useful, with a brief synopsis of each. There were times I ventured onto Stack Overflow or previewed a bit of a YouTube video, but largely I stuck with these so I wouldn't be persuaded to copy someone else's code. 
 
@@ -219,6 +222,7 @@ https://www.programiz.com/python-programming/exception-handling
 
 I thought I could use some of the existing errors from the book, like ValueError, before I made my own to raise in instances of non-alphabetical naming. I looked here in large part because you get to run the code on the page, and see how it operates, and how the errors look.
 
+### _________________________________________	 
 ## Summary
 I took on more than I could chew for this assignment. I had a lot of fun, and learned a lot about why the scaffolding supplied in past assignments was provided to us. I am proud of the program I have developed, and I hope that in the future I can give it some GUI shine and polish. For now, I have made a decent stab at pickling data, and following up with how serialization works with that module. In equal measure I hope my brief overview of both exception handling and custom errors suffices for now. Admittedly I am at my wit's end. Hopefully this journey elicits some delight, and a sense of curiosity for those who are not familiar with role playing games as a hobby. I certainly did not mind so much missing the forest for the trees incorporating a favorite pastime.
 
