@@ -103,12 +103,12 @@ This function is run twice through, as is done when rolling physical dice. These
 
 Here is a screen capture of the above code working in PyCharm (Figure 1). The code automatically unpickles the stored data when it opens, and so the storage file is populated already with a few generic characters, named after typical classes from Dungeons and Dragons type role playing games. Included is some ASCII art I pulled from https://www.asciiart.eu/miscellaneous/dice (External Site).
 
- 
+![Menu Option 1](image002.jpg "Rolling a New Character") 
 #### Figure 1. Rolling a New Character, and Oh Look, It's Me!
 
 Here, too, is the same code operating in the terminal (Figure 2). Though I do not show the error here, nor the pickling of the input data, there are figures further down the document showing both the raw code and its execution.
 
- 
+![Command Prompt](image004.jpg "Rolling a New Character")  
 #### Figure 2. Rolling Stats for Myself Again, with Slight Downgrade
 
 
@@ -127,11 +127,12 @@ Rogue [6, 6, 5, 4, 4, 4, 3, 3] [5, 5, 4, 4, 4, 2, 1, 1]
 Wizard [6, 6, 6, 5, 5, 5, 5, 4] [6, 6, 5, 4, 4, 4, 4, 3]
 ```
 
- 
+![BIN file](image006.jpg "Pickled Heroes")  
 #### Figure 3. Pickled Player Characters and Their Stats
 
 In PyCharm there isn't much to see, but I ensured there was a message printed which would confirm successful preservation of the characters and their dice rolls (Figure 4). The data from the document in the above figure is loaded and then displayed with option 2, after which it is pickled and stored again through option 4 on the menu. The document is unchanged, though both rolling new characters and deleting characters work similarly to how they did in the ToDo List assignment.
- 
+
+![PyCharm Pickling](image008.jpg "Reserializing Adventurers") 
 #### Figure 4. Showing Unpickled and Subsequently Repickled Data in PyCharm
 How to Handle the Exceptional
 Unpickling my data proved to be taxing. I kept getting an error that there were integers and strings and gobbledygook aplenty that it couldn't unpack, or at least that is how I interpreted TypeError: unorderable types: int() < str(). I had gone into this program with the understanding that pickling would be easy, and therefore was truly puzzled. 
@@ -169,7 +170,7 @@ else:
     raise FantasyNameError("That sounds made up... Cannot compute...")
 return character_name
 ```
- 
+![Naming the Naming Error](image010.jpg "Keep Names Simple, Please")  
 #### Figure 5: Custom Error Message for Silly Naming Conventions
 
 The terminal, of course, doesn't display this error, instead terminating the program prematurely in accordance with prescriptive naming convention.
