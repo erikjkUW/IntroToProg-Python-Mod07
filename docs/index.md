@@ -70,6 +70,7 @@ Eventually I got everything working. And I do emphasize eventually. I had to loo
 
 The output of my primary functions, that is to roll a bunch of dice and put them neatly in a dictionary under a character name, looks like so:
 
+```
 @staticmethod
 def dice_roll():
     """Rolls 8d6 dice, rerolling twice any numbers under 4
@@ -88,10 +89,13 @@ def dice_roll():
                 list_of_rolls.append(roll)
             roll_count += 1
     return sorted(list_of_rolls, reverse=True), "\nThis is the result of your 8d6 rolls."
+```
 
 This function is run twice through, as is done when rolling physical dice. These two created lists are then stored alongside the character name as values with identifying keys:
 
+```
 {Name : "character name", Dice Rolls 1 : [lstDiceRolls1], Dice Rolls 2 : [lstDiceRolls2]}
+```
 
 Here is a screen capture of the above code working in PyCharm (Figure 1). The code automatically unpickles the stored data when it opens, and so the storage file is populated already with a few generic characters, named after typical classes from Dungeons and Dragons type role playing games. Included is some ASCII art I pulled from https://www.asciiart.eu/miscellaneous/dice (External Site).
 
@@ -113,11 +117,12 @@ My script, as I said above, was modeled on the Task/Priority script from assignm
 
 To pickle my rolled stats, as well as the assigned character name, I simply used the pickle.dump() function. The first time I ran this part of the code I created the file using the "wb+" access mode. This is important because it informed me that my read function should contain an exception for when the file doesn't exist or is empty, and therefore can still be created without breaking the program. I will detail that in the following section on error handling. Once serialized in the binary document, the .dat file displays the following (Figure 3) for the below character data:
 
+```
 Bard [6, 6, 6, 6, 5, 4, 4] [5, 5, 5, 4, 4, 3, 3]
 Barbarian [6, 6, 5, 5, 4, 4, 2] [6, 6, 5, 5, 5, 2, 1]
 Wizard [6, 5, 4, 4, 2, 2, 2] [6, 6, 6, 6, 5, 3, 1]
 Rogue [6, 6, 5, 4, 4, 2, 2] [6, 5, 5, 4, 3, 3, 1]
-
+```
 
  
 Figure 3. Pickled Player Characters and Their Stats
@@ -132,6 +137,7 @@ I did some cyber-sleuthing, and could not figure out why my data was being denie
 
 However, I also determined that I needed to make a EOFError exception in my code to allow for an empty file, as well as a file that ends when the pickle module is expecting to deserialize more data. Here is what that code looks like, using a with/as clause (which I encountered on a previous assignment, and kept tucked away for a rainy day like today) inside a try/except clause:
 
+```
 list_of_rows = []
 with (open(file_name, "rb")) as file:
     while True:
@@ -141,6 +147,7 @@ with (open(file_name, "rb")) as file:
         except EOFError:
             break
 return list_of_rows
+```
 
 The other side of the exception-handling coin I wished to address was the custom error. There were multiple opportunities in my pseudo code where I thought I might be able to squeeze one in, but it turns out that most of the time all I needed was a if/else conditional. There was one exception, though, and that was to throw a monkey wrench into the system should some player opt for a character name with symbols or worse, numbers! And thus I scripted the custom error FantasyNameError:
 
@@ -149,13 +156,14 @@ class FantasyNameError(Exception):
 
 In order to take full advantage of this error, I had to search out how to verify if a string was, indeed, made up of only the alphabetical characters. The string method isalpha() gave me what I needed, which led me to this piece of code, which raises the error with a message when an offensive name warranted the code to cease altogether (Figure 5):
 
+```
 character_name = str(input("What is the character's name?: ")).title()
 if character_name.isalpha():
     pass
 else:
     raise FantasyNameError("That sounds made up... Cannot compute...")
 return character_name
-
+```
  
 Figure 5: Custom Error Message for Silly Naming Conventions
 
