@@ -109,7 +109,7 @@ Here is a screen capture of the above code working in PyCharm (Figure 1). The co
 Here, too, is the same code operating in the terminal (Figure 2). Though I do not show the error here, nor the pickling of the input data, there are figures further down the document showing both the raw code and its execution.
 
  
-#### Figure 2. Rolling Stats for Myself Again, with Slight Improvement
+#### Figure 2. Rolling Stats for Myself Again, with Slight Downgrade
 
 
 
