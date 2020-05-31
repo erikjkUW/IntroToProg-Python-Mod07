@@ -140,7 +140,8 @@ In PyCharm there isn't much to see, but I ensured there was a message printed wh
 ![PyCharm Pickling](image008.jpg "Reserializing Adventurers") 
 #### Figure 4. Showing Unpickled and Subsequently Repickled Data in PyCharm
 
-##How to Handle the Exceptional
+### _________________________________________
+## How to Handle the Exceptional
 
 
 Unpickling my data proved to be taxing. I kept getting an error that there were integers and strings and gobbledygook aplenty that it couldn't unpack, or at least that is how I interpreted TypeError: unorderable types: int() < str(). I had gone into this program with the understanding that pickling would be easy, and therefore was truly puzzled. 
