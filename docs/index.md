@@ -1,6 +1,9 @@
 Erik Knighton
+
 5/30/2020
+
 IT FDN 100 A
+
 Assignment07
 
 # Erringly Diced Pickles
@@ -16,7 +19,7 @@ To begin, I wrote some pseudo code to get an idea of how complicated this projec
 Once I had completed the pseudo code, I created a template in PyCharm, and then did a side-by-side comparison with the organization of module 6. I decided not to copy and paste anything, favoring the clunkiness of tapping away in an effort to ingrain the knowledge preserved in the starter script that I had modified.
  
 ### Pseudo Code:
-
+```
 Load existing data from .bin
 	Unpickle .bin file
 Display Menu:
@@ -63,7 +66,8 @@ Save list of rolls as value to dictionary key Ability Rolls
 	
 (4) Exit
 	(Exception - saved variable False, print warning)
- 
+```
+
 I was able to classify my functions as before, though figuring out which ones would go under Processor or IO took some doing. I often found myself wanting to add print() statements everywhere as I used to do while testing each step, verifying their successful operation. 
 
 Eventually I got everything working. And I do emphasize eventually. I had to look a few things up, referencing the textbook for the random module, pickle, errors and exceptions, as well as ensuring I had a solid grasp of the concepts.
@@ -100,12 +104,12 @@ This function is run twice through, as is done when rolling physical dice. These
 Here is a screen capture of the above code working in PyCharm (Figure 1). The code automatically unpickles the stored data when it opens, and so the storage file is populated already with a few generic characters, named after typical classes from Dungeons and Dragons type role playing games. Included is some ASCII art I pulled from https://www.asciiart.eu/miscellaneous/dice (External Site).
 
  
-Figure 1. Rolling a New Character, and Oh Look, It's Me!
+#### Figure 1. Rolling a New Character, and Oh Look, It's Me!
 
 Here, too, is the same code operating in the terminal (Figure 2). Though I do not show the error here, nor the pickling of the input data, there are figures further down the document showing both the raw code and its execution.
 
  
-Figure 2. Rolling Stats for Myself Again, with Slight Improvement
+#### Figure 2. Rolling Stats for Myself Again, with Slight Improvement
 
 
 
@@ -125,11 +129,11 @@ Rogue [6, 6, 5, 4, 4, 2, 2] [6, 5, 5, 4, 3, 3, 1]
 ```
 
  
-Figure 3. Pickled Player Characters and Their Stats
+#### Figure 3. Pickled Player Characters and Their Stats
 
 In PyCharm there isn't much to see, but I ensured there was a message printed which would confirm successful preservation of the characters and their dice rolls (Figure 4). The data from the document in the above figure is loaded and then displayed with option 2, after which it is pickled and stored again through option 4 on the menu. The document is unchanged, though both rolling new characters and deleting characters work similarly to how they did in the ToDo List assignment.
  
-Figure 4. Showing Unpickled and Subsequently Repickled Data in PyCharm
+#### Figure 4. Showing Unpickled and Subsequently Repickled Data in PyCharm
 How to Handle the Exceptional
 Unpickling my data proved to be taxing. I kept getting an error that there were integers and strings and gobbledygook aplenty that it couldn't unpack, or at least that is how I interpreted TypeError: unorderable types: int() < str(). I had gone into this program with the understanding that pickling would be easy, and therefore was truly puzzled. 
 
@@ -151,8 +155,10 @@ return list_of_rows
 
 The other side of the exception-handling coin I wished to address was the custom error. There were multiple opportunities in my pseudo code where I thought I might be able to squeeze one in, but it turns out that most of the time all I needed was a if/else conditional. There was one exception, though, and that was to throw a monkey wrench into the system should some player opt for a character name with symbols or worse, numbers! And thus I scripted the custom error FantasyNameError:
 
+```
 class FantasyNameError(Exception):
 	pass
+```
 
 In order to take full advantage of this error, I had to search out how to verify if a string was, indeed, made up of only the alphabetical characters. The string method isalpha() gave me what I needed, which led me to this piece of code, which raises the error with a message when an offensive name warranted the code to cease altogether (Figure 5):
 
@@ -165,7 +171,7 @@ else:
 return character_name
 ```
  
-Figure 5: Custom Error Message for Silly Naming Conventions
+#### Figure 5: Custom Error Message for Silly Naming Conventions
 
 The terminal, of course, doesn't display this error, instead terminating the program prematurely in accordance with prescriptive naming convention.
 
@@ -176,30 +182,38 @@ Here are some pages that I found to be especially useful, with a brief synopsis 
 
 ### Pickling Links:
 
-Learn Python - Serialization
+https://www.learnpython.org/en/Serialization
+
 I really enjoy the DataCamp widgets that let you toy with the code they offer in the examples on this page (something I wish I could put on my GitHub). Not only do I get a feeling for how the author approaches both using JSON and pickle, I have the opportunity to edit and implement my own variations. 
 
-Tutorials Point - Data Persistence 
+https://www.tutorialspoint.com/python_data_persistence/python_data_persistence_pickle_module.htm
+
 As we approach object orientation, I thought it best to bookmark this site, as it gives a brief example of both the Pickler and Unpickler classes. I do not understand how these are supposed to be different, yet, but as I said, worth holding on to in the interim.
 
-RealPython - Pickle Module
+https://realpython.com/python-pickle-module/
+
 Noteworthy in large part because there are some advanced techniques that I might not have known were related to pickling or serialization: like JSON. Also of note is that there are security issues with the pickle module. Unpickling unknown data is like eating pickles you found in the garden shed of a house you inherited from your long lost relative. 
 
-Programiz - DocStrings
+https://www.programiz.com/python-programming/docstrings
+
 I needed to brush up on docstrings anyway, and this was the only page to mention the pickle module. It's a simple list of all the available functions that the pickle module can perform, and the syntax for each. I was prompted to look up the difference between some, primarily the string versions dumps() and loads() versus their anything-goes counterparts.
 
 ### Exception Handling Links:
 
-Learn Python - Exception Handling
+https://www.learnpython.org/en/Exception_Handling
+
 I realized when looking at this page just how valuable the PyCharm built-in warnings and error are. I could have had NameError, IndexError, ValueError all over the place, but PyCharm by and large just highlights them before you even run the code. Good to know what they look like, and how to implement them, though, with the DataCamp widgets.
 
-Tutorials Point - Python Exceptions
+https://www.tutorialspoint.com/python/python_exceptions.htm
+
 A list of 29 existing errors, and when they are raised! Superb! Assert will be useful in the future, too, I'll bet. Mostly I appreciated the layman's approach to exception handling here. There's pseudo code, real code, and then step-by-step explanations of what is happening as you watch the code execute. Also a good reminder that you can have exept clauses without exceptions, or with many.
 
-Real Python - Exceptions
+https://realpython.com/python-exceptions/
+
 Some of the concepts here are over my head, but I wanted to keep it in mind because the site itself is worthwhile, as are their many visual aids, videos, downloadables. 
 
-Programiz - Exception Handling
+https://www.programiz.com/python-programming/exception-handling
+
 I thought I could use some of the existing errors from the book, like ValueError, before I made my own to raise in instances of non-alphabetical naming. I looked here in large part because you get to run the code on the page, and see how it operates, and how the errors look.
 
 ## Summary
