@@ -2,18 +2,20 @@ Erik Knighton
 5/30/2020
 IT FDN 100 A
 Assignment07
-https://github.com/erikjkUW/IntroToProg-Python-Mod07
-Erringly Diced Pickles
-Introduction
+
+#Erringly Diced Pickles
+
+##Introduction
 I honestly don't know what I was thinking. I assumed, because we weren't starting with any preexisting code, that we were tasked with building a program equally as complex, even moreso than last week. I watched the course video, I read the documents and the textbook, but somehow I got stuck in my own head and came up with something I'm proud of, but perhaps ashamed it took so long to construct.
 
 In any case, I had talked previously about writing a script that would roll for ability scores in Dungeons and Dragons using a method taught to me: 8d6, rerolling dice under 4, and only two rerolls. You do this twice and then add and assign to your various abilities. The statistical value is in keeping with what is the standard array [15, 14, 13, 12, 10, 8], but allows higher starting values, which allows for optimizing characters without having to sacrifice too much. I already wanted to have such automation on hand to share with my adventuring group, so it seemed I could two-birds-one-stone this assignment.
-Getting Carried Away
+
+##Getting Carried Away
 To begin, I wrote some pseudo code to get an idea of how complicated this project might be. On the next page I have preserved it in its infancy, a testament to my naivety and hubris. Knowing we would have to pickle our data, I chose to model it on the two previous ToDo list assignments, where there would be a menu of choices, dictionary rows nested in lists, cryptic tuples to unpack and a whole mess of functions to declare as well as document (something I did not effectively flesh out last time). 
 
 Once I had completed the pseudo code, I created a template in PyCharm, and then did a side-by-side comparison with the organization of module 6. I decided not to copy and paste anything, favoring the clunkiness of tapping away in an effort to ingrain the knowledge preserved in the starter script that I had modified.
  
-Pseudo Code:
+###Pseudo Code:
 
 Load existing data from .bin
 	Unpickle .bin file
@@ -104,7 +106,8 @@ Figure 2. Rolling Stats for Myself Again, with Slight Improvement
 
 
 *It was here, after I had spent far too long poring over my script, getting everything in order, making sure all of the steps performed their requested functions successfully, and trying to make them both user-friendly as well as nicely organized on screen, that I watched the starter video. The video that says to keep it simple and write one or two code snippets that describe how to both pickle data and handle errors and exceptions. Because I had set my mind on using this script as exemplar of both of those required concepts, there was little use in backtracking now. I will publish this code on my GitHub page, and take whatever hit I should from erring towards unnecessary complexity. And where would I be if my long-windedness were unjustly fettered?
-In a Proverbial Pickle
+
+##In a Proverbial Pickle
 
 My script, as I said above, was modeled on the Task/Priority script from assignments 6 and 7. Therefore, pickling instead of writing to a text document was a simple leap in difficulty. 
 
@@ -159,10 +162,11 @@ Figure 5: Custom Error Message for Silly Naming Conventions
 The terminal, of course, doesn't display this error, instead terminating the program prematurely in accordance with prescriptive naming convention.
 
 I believe that is the last of the error handling concepts I tackled in this module. Using finally was the only clause I didn't make use of. I am keeping it in mind for future assignments whereby a document might require closure only after passing all the exceptions or something. Next is taking on Jekyll with the GitHub website portion of the assignment. Plenty of opportunities to go astray there, as well.
-Websiteography
+
+##Websiteography
 Here are some pages that I found to be especially useful, with a brief synopsis of each. There were times I ventured onto Stack Overflow or previewed a bit of a YouTube video, but largely I stuck with these so I wouldn't be persuaded to copy someone else's code. 
 
-Pickling Links:
+###Pickling Links:
 
 Learn Python - Serialization
 I really enjoy the DataCamp widgets that let you toy with the code they offer in the examples on this page (something I wish I could put on my GitHub). Not only do I get a feeling for how the author approaches both using JSON and pickle, I have the opportunity to edit and implement my own variations. 
@@ -176,7 +180,7 @@ Noteworthy in large part because there are some advanced techniques that I might
 Programiz - DocStrings
 I needed to brush up on docstrings anyway, and this was the only page to mention the pickle module. It's a simple list of all the available functions that the pickle module can perform, and the syntax for each. I was prompted to look up the difference between some, primarily the string versions dumps() and loads() versus their anything-goes counterparts.
 
-Exception Handling Links:
+###Exception Handling Links:
 
 Learn Python - Exception Handling
 I realized when looking at this page just how valuable the PyCharm built-in warnings and error are. I could have had NameError, IndexError, ValueError all over the place, but PyCharm by and large just highlights them before you even run the code. Good to know what they look like, and how to implement them, though, with the DataCamp widgets.
@@ -189,6 +193,7 @@ Some of the concepts here are over my head, but I wanted to keep it in mind beca
 
 Programiz - Exception Handling
 I thought I could use some of the existing errors from the book, like ValueError, before I made my own to raise in instances of non-alphabetical naming. I looked here in large part because you get to run the code on the page, and see how it operates, and how the errors look.
-Summary
+
+##Summary
 I took on more than I could chew for this assignment. I had a lot of fun, and learned a lot about why the scaffolding supplied in past assignments was provided to us. I am proud of the program I have developed, and I hope that in the future I can give it some GUI shine and polish. For now, I have made a decent stab at pickling data, and following up with how serialization works with that module. In equal measure I hope my brief overview of both exception handling and custom errors suffices for now. Admittedly I am at my wit's end. Hopefully this journey elicits some delight, and a sense of curiosity for those who are not familiar with role playing games as a hobby. I certainly did not mind so much missing the forest for the trees incorporating a favorite pastime.
 
