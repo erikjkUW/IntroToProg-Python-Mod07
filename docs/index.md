@@ -84,7 +84,7 @@ def dice_roll():
     :return:
     """
     roll_count = 0
-    list_of_rolls = [random.randint(1,6) for roll in range(7)]
+    list_of_rolls = [random.randint(1,6) for roll in range(8)]
     while roll_count < 2:
         for roll in list_of_rolls:
             if roll < 4:
@@ -122,10 +122,9 @@ My script, as I said above, was modeled on the Task/Priority script from assignm
 To pickle my rolled stats, as well as the assigned character name, I simply used the pickle.dump() function. The first time I ran this part of the code I created the file using the "wb+" access mode. This is important because it informed me that my read function should contain an exception for when the file doesn't exist or is empty, and therefore can still be created without breaking the program. I will detail that in the following section on error handling. Once serialized in the binary document, the .dat file displays the following (Figure 3) for the below character data:
 
 ```
-Bard [6, 6, 6, 6, 5, 4, 4] [5, 5, 5, 4, 4, 3, 3]
-Barbarian [6, 6, 5, 5, 4, 4, 2] [6, 6, 5, 5, 5, 2, 1]
-Wizard [6, 5, 4, 4, 2, 2, 2] [6, 6, 6, 6, 5, 3, 1]
-Rogue [6, 6, 5, 4, 4, 2, 2] [6, 5, 5, 4, 3, 3, 1]
+Barbarian [6, 6, 6, 6, 4, 4, 4, 3] [6, 6, 6, 5, 5, 4, 4, 3]
+Rogue [6, 6, 5, 4, 4, 4, 3, 3] [5, 5, 4, 4, 4, 2, 1, 1]
+Wizard [6, 6, 6, 5, 5, 5, 5, 4] [6, 6, 5, 4, 4, 4, 4, 3]
 ```
 
  
