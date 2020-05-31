@@ -1,18 +1,6 @@
-Erik Knighton *=#=* 5/30/2020 *=#=* IT FDN 100 A *=#=* Assignment07
+Erik Knighton_____5/30/2020_____IT FDN 100 A_____Assignment07
 
 # Erringly Diced Pickles
-
-  ____
-  
- /\' .\    _____
- 
-/: \___\  / .  /\
-
-\' / . / /____/..\
-
- \/___/  \'  '\  /
- 
-          \'__'\/
 	  
 
 ## Introduction
