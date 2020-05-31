@@ -1,4 +1,4 @@
-Erik Knighton #=======# 5/30/2020 #=======# IT FDN 100 A #=======# Assignment07
+Erik Knighton *=#=* 5/30/2020 *=#=* IT FDN 100 A *=#=* Assignment07
 
 # Erringly Diced Pickles
 
