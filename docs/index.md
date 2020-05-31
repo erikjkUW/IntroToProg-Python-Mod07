@@ -2,7 +2,12 @@ Erik Knighton #=======# 5/30/2020 #=======# IT FDN 100 A #=======# Assignment07
 
 # Erringly Diced Pickles
 
-
+  ____
+ /\' .\    _____
+/: \___\  / .  /\
+\' / . / /____/..\
+ \/___/  \'  '\  /
+          \'__'\/
 
 ## Introduction
 I honestly don't know what I was thinking. I assumed, because we weren't starting with any preexisting code, that we were tasked with building a program equally as complex, even moreso than last week. I watched the course video, I read the documents and the textbook, but somehow I got stuck in my own head and came up with something I'm proud of, but perhaps ashamed it took so long to construct.
